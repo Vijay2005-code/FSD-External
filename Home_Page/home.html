@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Home_Page/home.css">
+    <script>
+        // Load navbar dynamically
+        window.addEventListener('load', () => {
+            fetch('/navbar_resusable/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+</head>
+<body id="body">
+    <div id="navbar-container"></div> <!-- Placeholder for navbar -->
+    <!--------------child nav bar section---------------------------->
+    <div class="container-fluid py-4 px-0">
+
+        <div class="text-muted small mb-2">
+          IndiaMART > Doors and Windows > Window > <span class="text-dark fw-medium">UPVC Windows</span>
+        </div>
+    
+        <div class="d-flex align-items-end justify-content-between flex-wrap mb-3">
+          <h2 class="h4 fw-semibold mb-0">
+            UPVC Windows <span class="text-muted small">(1000+ products available)</span>
+          </h2>
+    
+          <div class="view-toggle d-flex align-items-center gap-2">
+            <span class="text-muted small me-1">View by:</span>
+            <button class="btn btn-outline-secondary p-1"><i class="bi bi-grid-3x3-gap"></i> Grid</button>
+            <button class="btn btn-outline-secondary p-1"><i class="bi bi-list-ul"></i> List</button>
+          </div>
+        </div>
+    
+        <div class="d-flex align-items-center gap-3 bg-white p-3 rounded shadow-sm mb-4">
+          <div class="location-box d-flex align-items-center">
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+            <input type="text" class="form-control border-0 p-0" placeholder="Please Enter Your City Name" />
+          </div>
+          <button class="btn btn-outline-secondary d-flex align-items-center gap-1 nowrap">
+            <i class="bi bi-geo-fill"></i> Near Me
+          </button>
+          <div class="city-list d-flex flex-nowrap overflow-auto">
+            <a href="#" class="city-btn">Bengaluru</a>
+            <a href="#" class="city-btn">Hyderabad</a>
+            <a href="#" class="city-btn">Chennai</a>
+            <a href="#" class="city-btn">Delhi</a>
+            <a href="#" class="city-btn">Coimbatore</a>
+            <a href="#" class="city-btn">Greater Noida</a>
+            <a href="#" class="city-btn">Pune</a>
+            <a href="#" class="city-btn">Gurugram</a>
+            <a href="#" class="city-btn">Lucknow</a>
+            <a href="#" class="city-btn">Mumbai</a>
+            <a href="#" class="city-btn">Noida</a>
+          </div>
+        </div>
+    </div>
+
+    <aside class="sidebar p-2 bg-light border rounded">
+        <!-- Related Category -->
+        <div class="mb-4">
+          <h6 class="bg-secondary-subtle p-2 fw-semibold border-bottom">Related Category</h6>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="img1.jpg" alt="UPVC Fixed Windows" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">UPVC Fixed Windows</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="img2.jpg" alt="PVC Window" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">PVC Window</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="img3.jpg" alt="UPVC Tilt & Turn Window" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">UPVC Tilt & Turn Window</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="img4.jpg" alt="UPVC Combination Windows" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">UPVC Combination Windows</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="img5.jpg" alt="Used UPVC Windows" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">Used UPVC Windows</a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Filter Results -->
+        <div class="mb-4">
+          <h6 class="bg-secondary-subtle p-2 fw-semibold border-bottom">Filter Results</h6>
+          <div class="form-check small ps-3 py-1">
+            <input class="form-check-input" type="checkbox" id="filterCity">
+            <label class="form-check-label" for="filterCity">Your City</label>
+          </div>
+          <div class="form-check small ps-3 py-1">
+            <input class="form-check-input" type="checkbox" id="filterVideo">
+            <label class="form-check-label" for="filterVideo">Video</label>
+          </div>
+        </div>
+      
+        <!-- Related Brands -->
+        <div>
+          <h6 class="bg-secondary-subtle p-2 fw-semibold border-bottom">Related Brands</h6>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="" alt="UPVC Fixed Windows" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">Fenesta UPVC Windows</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="/Home_Page/Home_Assests/pvc-window-125x125.jpg" alt="PVC Window" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">Lesso UPVC Windows</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="/Home_Page/Home_Assests/upvc-tilt-125x125.jpg" alt="UOVC tilt & turn window" class="img-thumbnail" width="60">
+              <a href="#" class="text-decoration-none small">Veka UPVC Window</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+              <img src="/Home_Page/Home_Assests/" alt="UPVS contribution windows" class="" width="60">
+              <a href="#" class="text-decoration-none small">Deceuninck UPVC Windows</a>
+            </li>
+            <li class="d-flex align-items-start gap-2 my-2">
+                <img src="" alt="used UPVC windows" class="" width="60">
+                <a href="#" class="text-decoration-none small">Deceuninck UPVC Windows</a>
+              </li>
+          </ul>
+        </div>
+      </aside>
+      
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
